@@ -36,7 +36,7 @@ const Column = ({ columns,selectedBoard }) => {
         onDragOver={handleOnDragOver}
         onDrop={(e)=>handleOnDrop(e,colindex)}
          key={column.name} className="w-[280px] h-full ">
-          <div className="text-Slate-Blue flex justify-start items-center gap-4 mb-6 capitalize">
+          <div className="text-Slate-Blue flex justify-start items-center gap-4 mb-6 uppercase tracking-wider">
             <div
               className={`w-[15px] h-[15px] rounded-full  `}
               style={{background: colors[colindex % colors.length]}}
