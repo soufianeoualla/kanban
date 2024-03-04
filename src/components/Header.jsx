@@ -48,7 +48,7 @@ const Header = ({ hideSidebar, selectedBoard, setMobileMenu, mobileMenu }) => {
       </div>
       <div className="flex justify-between items-center px-6 gap-4">
         <button
-          disabled={selectedBoard.columns.length === 0}
+          disabled={selectedBoard && selectedBoard.columns.length === 0}
           onClick={() => setAddEditTask(true)}
           className="h-12 w-[164px] text-lg text-white bg-purple rounded-3xl hover:bg-opacity-70 disabled:bg-opacity-20 disabled:cursor-not-allowed sm:hidden "
         >
@@ -56,7 +56,7 @@ const Header = ({ hideSidebar, selectedBoard, setMobileMenu, mobileMenu }) => {
           + Add New Task{" "}
         </button>
         <button
-          disabled={selectedBoard.columns.length === 0}
+          disabled={selectedBoard && selectedBoard.columns.length === 0}
           onClick={() => setAddEditTask(true)}
           className="h-8 w-12 justify-center items-center text-lg text-white bg-purple rounded-3xl hover:bg-opacity-70 disabled:bg-opacity-20 disabled:cursor-not-allowed hidden sm:flex  "
         >
